@@ -29,3 +29,10 @@ else:
 
     print("Processo concluído.")
 
+# Como funciona:
+# ====================================================================================================================    
+# import os: Traz funções para lidar com arquivos e pastas.
+# os.listdir(DIRETORIO): Lista todos os itens dentro da pasta.
+# os.path.join(DIRETORIO, nome_arquivo): Cria o caminho completo do arquivo (ex: ./meus_arquivos/meu_arquivo.txt).
+# f"{STRING_PREFIXO}{nome_arquivo}": Uma f-string para criar o novo nome, juntando "NOVO_" com o nome antigo.
+# os.rename(caminho_antigo, caminho_novo): A função que faz a renomeação no sistema. 
