@@ -1,17 +1,17 @@
-import os # Importa o mÃ³dulo para interagir com o sistema operacional
+import os # interagir com o sistema operacional
 
-# 1. Define a string a ser adicionada e o diretÃ³rio
+# 1. Define a string do prefixo e da pasta
 STRING_PREFIXO = "Herez "
 DIRETORIO = "/root/Downloads/" # Altere para o caminho da sua pasta
 
-# Verifica se o diretÃ³rio existe
+# Verifica se a pasta existe
 if not os.path.exists(DIRETORIO):
-    print(f"DiretÃ³rio '{DIRETORIO}' nÃ£o encontrado.")
+    print(f"Pasta '{DIRETORIO}' nao encontrada.")
 else:
     print(f"Processando arquivos em: {DIRETORIO}")
-    # 2. Lista todos os arquivos no diretÃ³rio
+    # 2. Lista todos os arquivos na pasta
     for nome_arquivo in os.listdir(DIRETORIO):
-        # 3. Verifica se Ã© um arquivo e se termina com .txt
+        # 3. Verifica se termina com .pdf
         if nome_arquivo.endswith(".pdf") and os.path.isfile(os.path.join(DIRETORIO, nome_arquivo)):
             # 4. Cria o novo nome do arquivo usando f-string para concatenar
             novo_nome = f"{STRING_PREFIXO}{nome_arquivo}"
@@ -28,4 +28,4 @@ else:
             except Exception as e:
                 print(f"Erro ao renomear {nome_arquivo}: {e}")
 
-    print("Processo concluÃ­do.")
+    print("Processo concluído.")
